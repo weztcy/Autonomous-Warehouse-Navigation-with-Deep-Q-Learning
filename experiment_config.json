@@ -1,0 +1,36 @@
+{
+    "env": {
+        "map_name": "moderate_map",
+        "max_steps": 120,
+        "reward_goal": 60.0,
+        "reward_step": -0.2,
+        "reward_collision": -5.0,
+        "reward_timeout": -10.0,
+        "reward_distance_shaping": true,
+        "shaping_weight": 0.5
+    },
+    "dqn": {
+        "state_dim": 19,
+        "action_dim": 4,
+        "hidden_dims": [
+            128,
+            128,
+            64
+        ],
+        "learning_rate": 0.0005,
+        "gamma": 0.99,
+        "replay_capacity": 40000,
+        "batch_size": 64,
+        "epsilon_start": 1.0,
+        "epsilon_min": 0.05,
+        "epsilon_decay": 0.994,
+        "target_update_tau": 0.005
+    },
+    "training": {
+        "num_episodes": 600,
+        "seed": 42,
+        "total_time_seconds": 42.18,
+        "best_moving_success_50": 1.0,
+        "best_moving_reward_50": 64.9
+    }
+}
